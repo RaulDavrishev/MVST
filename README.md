@@ -62,4 +62,7 @@ SQL queries stored in the **"data/SQL"** folder.
 
 # **6. UI implementation and DB connection** 
 
-We have created a web application that is stored in the **"site"** folder.
+1. We have created a web application that is stored in the **"site"** folder.
+
+2. We connected the **Oracle** database server using the **PHP** programming language.
+   The code for connecting the database is stored in the **"site/db.php"** folder.
