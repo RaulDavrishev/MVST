@@ -75,7 +75,7 @@ SQL queries stored in the **"data/SQL"** folder.
    > trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);  
    >}  
    > session_start();  
-   >?php  
+   >?php>  
 
 3. The code for trigger corresponding SQL queries to retrieve the necessary data is stored in the **"site/admin.php"** file.
 
