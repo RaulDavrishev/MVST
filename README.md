@@ -66,10 +66,19 @@ SQL queries stored in the **"data/SQL"** folder.
 
 2. We connected the **Oracle** database server using the **PHP** programming language.
    The code for connecting the database is stored in the **"site/db.php"** file.
+   
+   
+><?php
+
+$conn = oci_connect('hr', 'hr', 'localhost/orcl');
+if (!$conn) {
+    $e = oci_error();
+    trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
+}
+session_start();
+?>
 
 3. The code for trigger corresponding SQL queries to retrieve the necessary data is stored in the **"site/admin.php"** file.
 
 4. The code for display the retrieved data to the users is stored in the **"site/index.php"** file.
 
->I think you should use an  
- addr element here instead.
