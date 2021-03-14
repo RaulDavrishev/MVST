@@ -69,5 +69,7 @@ SQL queries stored in the **"data/SQL"** folder.
 
 3. The code for trigger corresponding SQL queries to retrieve the necessary data is stored in the **"site/admin.php"** file.
 
-4. 
-5. 
+4. The code for display the retrieved data to the users is stored in the **"site/index.php"** file.
+
+I think you should use an
+`<addr>` element here instead.
