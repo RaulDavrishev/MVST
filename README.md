@@ -71,5 +71,7 @@ SQL queries stored in the **"data/SQL"** folder.
 
 4. The code for display the retrieved data to the users is stored in the **"site/index.php"** file.
 
+<
 I think you should use an
-`<addr>` element here instead.
+addr element here instead.
+>
