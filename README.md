@@ -67,6 +67,7 @@ SQL queries stored in the **"data/SQL"** folder.
 2. We connected the **Oracle** database server using the **PHP** programming language.
    The code for connecting the database is stored in the **"site/db.php"** file.
    
+   ```
    >$conn = oci_connect('hr', 'hr', 'localhost/orcl');  
    >if (!$conn) {  
    > $e = oci_error();  
@@ -74,6 +75,7 @@ SQL queries stored in the **"data/SQL"** folder.
    >}  
    > session_start();  
    >?php>  
+   ```
 
 3. The code for trigger corresponding SQL queries to retrieve the necessary data is stored in the **"site/admin.php"** file.
 
