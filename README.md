@@ -59,3 +59,7 @@ DML queries stored in the **"data/DML"** folder.
 # **5. SQL queries**  
 
 SQL queries stored in the **"data/SQL"** folder. 
+
+# **6. UI implementation and DB connection** 
+
+We have created a web application that is stored in the **"site"** folder.
