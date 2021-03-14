@@ -65,4 +65,9 @@ SQL queries stored in the **"data/SQL"** folder.
 1. We have created a web application that is stored in the **"site"** folder.
 
 2. We connected the **Oracle** database server using the **PHP** programming language.
-   The code for connecting the database is stored in the **"site/db.php"** folder.
+   The code for connecting the database is stored in the **"site/db.php"** file.
+
+3. The code for trigger corresponding SQL queries to retrieve the necessary data is stored in the **"site/admin.php"** file.
+
+4. 
+5. 
