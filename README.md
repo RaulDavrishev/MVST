@@ -68,15 +68,16 @@ SQL queries stored in the **"data/SQL"** folder.
    The code for connecting the database is stored in the **"site/db.php"** file.
    
    
-><?php
+   >
+   <?php
 
-$conn = oci_connect('hr', 'hr', 'localhost/orcl');
-if (!$conn) {
+   $conn = oci_connect('hr', 'hr', 'localhost/orcl');
+   if (!$conn) {
     $e = oci_error();
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
-}
-session_start();
-?>
+   }
+   session_start();
+   ?>>
 
 3. The code for trigger corresponding SQL queries to retrieve the necessary data is stored in the **"site/admin.php"** file.
 
