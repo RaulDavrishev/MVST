@@ -82,3 +82,6 @@ SQL queries stored in the **"data/SQL"** folder.
 
 4. The code for display the retrieved data to the users is stored in the **"site/index.php"** file.
 
+# **7. SQL to Relational Algebra (RA) operators** 
+
+SQL queries in relation algebra representation stored in the **"images/RA"** folder. 
