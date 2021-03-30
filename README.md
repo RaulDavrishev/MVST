@@ -88,4 +88,6 @@ SQL queries in relation algebra representation stored in the **"images/RA"** fol
 
 # **8. True Cardinality Calculation** 
 
+True cardinality calculations stored in the **"data/cardinality"** folder.
+
 # **9. Query Speed Performance** 
