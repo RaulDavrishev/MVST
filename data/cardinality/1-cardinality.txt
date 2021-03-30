@@ -1,0 +1,32 @@
+1. 
+	SELECT TITLE FROM MOVIE m JOIN MOVIE_CAST mc ON m.MOVIE_ID=mc.MOVIE_ID
+	JOIN PERSON p ON mc.PERSON_ID=p.PERSON_ID WHERE PERSON_NAME = 'Scarlett Johansson';
+
+3 possible execution plans:
+
+DATASET:
+	MOVIE: 22
+	MOVIE_CAST: 22
+	PERSON: 22
+
+	1) SELECT COUNT(*) FROM MOVIE m, MOVIE_CAST mc, PERSON p WHERE PERSON_NAME = 'Scarlett Johansson' AND m.MOVIE_ID=mc.MOVIE_ID AND mc.PERSON_ID=p.PERSON_ID;
+
+	|T'| = (22*22)/max(22,22) * 22/max(22,22) = 1*1 = 1
+
+	True result: 1
+
+	2) SELECT COUNT(*) FROM MOVIE m JOIN (MOVIE_CAST mc JOIN PERSON p ON mc.PERSON_ID=p.PERSON_ID AND PERSON_NAME = 'Scarlett Johansson') ON m.MOVIE_ID=mc.MOVIE_ID;
+
+	|T'| = (22*22)/max(22,22) * 22/max(22,22) = 1*1 = 1
+
+	True result: 1
+
+	3) SELECT COUNT(*) FROM PERSON p JOIN
+	(MOVIE m JOIN MOVIE_CAST ON m.MOVIE_ID=mc.MOVIE_ID) ON mc.PERSON_ID=p.PERSON_ID AND PERSON_NAME = 'Scarlett Johansson');
+
+	|T'| = (22*22)/max(22,22) * 22/max(22,22) = 1*1 = 1
+
+	True result: 1
+
+
+All 3 plans plus minus are equally fast, since there is not much data.

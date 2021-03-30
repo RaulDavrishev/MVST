@@ -1,0 +1,38 @@
+15. 
+	SELECT m.TITLE FROM MOVIE m 
+	JOIN PRODUCTION_COUNTRY pc ON m.MOVIE_ID=pc.MOVIE_ID 
+	JOIN COUNTRY c ON pc.COUNTRY_ID=c.COUNTRY_ID
+	WHERE YEAR > 2015 AND c.COUNTRY_NAME = 'USA';
+
+3 possible execution plans:
+
+DATASET:
+	MOVIE: 22
+	PRODUCTION_COUNTRY: 22
+	COUNTRY: 5
+
+	1) SELECT COUNT(*) FROM MOVIE m, PRODUCTION_COUNTRY pc, COUNTRY c 
+	WHERE m.MOVIE_ID=pc.MOVIE_ID AND pc.COUNTRY_ID=c.COUNTRY_ID
+	AND YEAR > 2015 AND c.COUNTRY_NAME = 'USA';
+
+	|T'| = (22*22)/max(22,22) * (5*22)/max(22,5) = 1*5 = 5
+
+	True result: 4
+
+	2) SELECT COUNT(*) FROM MOVIE m JOIN 
+	(PRODUCTION_COUNTRY pc JOIN COUNTRY c ON pc.COUNTRY_ID=c.COUNTRY_ID) ON m.MOVIE_ID=pc.MOVIE_ID AND YEAR > 2015 AND c.COUNTRY_NAME = 'USA';
+
+	|T'| = (22*22)/max(22,22) * (22*5)/max(5,22) = 1*5 = 5
+
+	True result: 4
+
+	3) SELECT COUNT(*) FROM COUNTRY c JOIN 
+	(MOVIE m JOIN PRODUCTION_COUNTRY pc ON m.MOVIE_ID=pc.MOVIE_ID) 
+	ON pc.COUNTRY_ID=c.COUNTRY_ID AND YEAR > 2015 AND c.COUNTRY_NAME = 'USA';
+
+	|T'| = (5*22)/max(22,5) * (22*22)/max(22,22) = 5*1 = 5
+
+	True result: 4
+
+
+All 3 plans plus minus are equally fast, since there is not much data.
