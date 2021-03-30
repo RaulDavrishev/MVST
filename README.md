@@ -84,4 +84,8 @@ SQL queries stored in the **"data/SQL"** folder.
 
 # **7. SQL to Relational Algebra (RA) operators** 
 
-SQL queries in relation algebra representation stored in the **"images/RA"** folder. 
+SQL queries in relation algebra representation stored in the **"images/RA"** folder.
+
+# **8. True Cardinality Calculation** 
+
+# **9. Query Speed Performance** 
