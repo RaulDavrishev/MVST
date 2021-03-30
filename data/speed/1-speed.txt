@@ -1,0 +1,14 @@
+Query: 
+	SELECT TITLE FROM MOVIE m JOIN MOVIE_CAST mc ON m.MOVIE_ID=mc.MOVIE_ID
+	JOIN PERSON p ON mc.PERSON_ID=p.PERSON_ID WHERE PERSON_NAME = 'Scarlett Johansson';
+
+Speed Tests:
+	1) 4 ms
+	2) 2 ms
+	3) 2 ms
+	4) 2 ms
+	5) 2 ms
+
+	Average: 2.4 ms 
+
+Explain plan stored in "explain" folder. 
