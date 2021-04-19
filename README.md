@@ -93,3 +93,9 @@ True cardinality calculations stored in the **"data/cardinality"** folder.
 # **9. Query Speed Performance** 
 
 Query Speed Performance stored in the **"data/speed"** folder.
+
+# **10. Presentation and Demo**  
+
+Presentation stored in the **"presentation"** folder.
+
+Link to demo video (youtube): https://youtu.be/6cTo1qABlBI
